@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { addTask, fetchTasks, deleteTask, toggleCompleted } from './operations';
+import { addTask, fetchTasks, deleteTask } from './operations';
+import { logOut } from 'redux/auth/operations';
 
 const handlePending = state => {
   state.isLoading = true;
 };
 const handleRejected = (state, action) => {
-  state.error = true;
+  state.error = action.payload;
   state.isLoading = false;
 };
 
@@ -41,16 +42,11 @@ const tasksSlice = createSlice({
       state.error = null;
     },
     [deleteTask.rejected]: handleRejected,
-    [toggleCompleted.pending]: handlePending,
-    [toggleCompleted.fulfilled](state, action) {
-      state.isLoading = false;
-      const index = state.items.findIndex(
-        task => task.id === action.payload.id
-      );
-      state.items.splice(index, 1, action.payload);
-      state.error = null;
+    [logOut.fulfilled](state) {
+      state.items = [];
+      state.token = null;
+      state.isLoggedIn = false;
     },
-    [toggleCompleted.rejected]: handleRejected,
   },
 });
 
