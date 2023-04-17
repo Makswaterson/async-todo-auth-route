@@ -30,7 +30,7 @@ const authSlice = createSlice({
       state.isRefreshing = true;
     },
     [refreshUser.fulfilled](state, action) {
-      state.user = action.payload.user;
+      state.user = action.payload;
       state.isLoggedIn = true;
       state.isRefreshing = false;
     },

@@ -10,7 +10,7 @@ export const TaskEditor = () => {
     event.preventDefault();
     const form = event.target;
     const text = form.elements.text.value;
-    if (text !== null) {
+    if (text !== '') {
       dispatch(addTask(text));
       form.reset();
       return;

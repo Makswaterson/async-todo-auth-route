@@ -9,7 +9,7 @@ export const LoginForm = () => {
     const form = e.currentTarget;
     dispatch(
       logIn({
-        name: form.elements.email.value,
+        email: form.elements.email.value,
         password: form.elements.password.value,
       })
     );
@@ -26,7 +26,9 @@ export const LoginForm = () => {
         Password
         <input type="password" name="password" />
       </label>
-      <button type="submit">Log In</button>
+      <button type="submit" className={css.button}>
+        Log In
+      </button>
     </form>
   );
 };

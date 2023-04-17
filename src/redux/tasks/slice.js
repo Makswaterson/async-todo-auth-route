@@ -44,8 +44,8 @@ const tasksSlice = createSlice({
     [deleteTask.rejected]: handleRejected,
     [logOut.fulfilled](state) {
       state.items = [];
-      state.token = null;
-      state.isLoggedIn = false;
+      state.error = null;
+      state.isLoading = false;
     },
   },
 });

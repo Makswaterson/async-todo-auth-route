@@ -4,6 +4,7 @@ import css from './RegisterForm.module.css';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
+
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -30,7 +31,9 @@ export const RegisterForm = () => {
         Password
         <input type="password" name="password" />
       </label>
-      <button type="submit">Register</button>
+      <button type="submit" className={css.button}>
+        Register
+      </button>
     </form>
   );
 };
