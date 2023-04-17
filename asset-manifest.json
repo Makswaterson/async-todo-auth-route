@@ -1,13 +1,29 @@
 {
   "files": {
-    "main.css": "/redux-toolkit-createasyncthunk-todo/static/css/main.5763847e.css",
-    "main.js": "/redux-toolkit-createasyncthunk-todo/static/js/main.0b9f2725.js",
-    "index.html": "/redux-toolkit-createasyncthunk-todo/index.html",
-    "main.5763847e.css.map": "/redux-toolkit-createasyncthunk-todo/static/css/main.5763847e.css.map",
-    "main.0b9f2725.js.map": "/redux-toolkit-createasyncthunk-todo/static/js/main.0b9f2725.js.map"
+    "main.css": "/async-todo-auth-route/static/css/main.21d197b6.css",
+    "main.js": "/async-todo-auth-route/static/js/main.9daaa00a.js",
+    "static/js/266.1ad8c742.chunk.js": "/async-todo-auth-route/static/js/266.1ad8c742.chunk.js",
+    "static/css/40.08d101fa.chunk.css": "/async-todo-auth-route/static/css/40.08d101fa.chunk.css",
+    "static/js/40.cf822a7b.chunk.js": "/async-todo-auth-route/static/js/40.cf822a7b.chunk.js",
+    "static/css/635.05f3c38f.chunk.css": "/async-todo-auth-route/static/css/635.05f3c38f.chunk.css",
+    "static/js/635.ffb3dcf8.chunk.js": "/async-todo-auth-route/static/js/635.ffb3dcf8.chunk.js",
+    "static/css/853.373e0fa8.chunk.css": "/async-todo-auth-route/static/css/853.373e0fa8.chunk.css",
+    "static/js/853.c7944d57.chunk.js": "/async-todo-auth-route/static/js/853.c7944d57.chunk.js",
+    "static/js/270.cdca11d3.chunk.js": "/async-todo-auth-route/static/js/270.cdca11d3.chunk.js",
+    "index.html": "/async-todo-auth-route/index.html",
+    "main.21d197b6.css.map": "/async-todo-auth-route/static/css/main.21d197b6.css.map",
+    "main.9daaa00a.js.map": "/async-todo-auth-route/static/js/main.9daaa00a.js.map",
+    "266.1ad8c742.chunk.js.map": "/async-todo-auth-route/static/js/266.1ad8c742.chunk.js.map",
+    "40.08d101fa.chunk.css.map": "/async-todo-auth-route/static/css/40.08d101fa.chunk.css.map",
+    "40.cf822a7b.chunk.js.map": "/async-todo-auth-route/static/js/40.cf822a7b.chunk.js.map",
+    "635.05f3c38f.chunk.css.map": "/async-todo-auth-route/static/css/635.05f3c38f.chunk.css.map",
+    "635.ffb3dcf8.chunk.js.map": "/async-todo-auth-route/static/js/635.ffb3dcf8.chunk.js.map",
+    "853.373e0fa8.chunk.css.map": "/async-todo-auth-route/static/css/853.373e0fa8.chunk.css.map",
+    "853.c7944d57.chunk.js.map": "/async-todo-auth-route/static/js/853.c7944d57.chunk.js.map",
+    "270.cdca11d3.chunk.js.map": "/async-todo-auth-route/static/js/270.cdca11d3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5763847e.css",
-    "static/js/main.0b9f2725.js"
+    "static/css/main.21d197b6.css",
+    "static/js/main.9daaa00a.js"
   ]
 }
