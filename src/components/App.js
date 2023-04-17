@@ -1,27 +1,35 @@
-import { Layout } from 'components/Layout/Layout';
-import { AppBar } from 'components/AppBar/AppBar';
-import { TaskForm } from 'components/TaskForm/TaskForm';
-import { TaskList } from 'components/TaskList/TaskList';
-import { fetchTasks } from 'redux/tasks/operations';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectError, selectIsLoading } from 'redux/tasks/selectors';
-import { useEffect } from 'react';
+import { useEffect, lazy } from 'react';
+import { useDispatch } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './Layout';
+// import { PrivateRoute } from './PrivateRoute';
+// import { RestrictedRoute } from './RestrictedRoute';
+import { refreshUser } from 'redux/auth/operations';
+import { useAuth } from 'hooks';
+
+const Homepage = lazy(() => import('../pages/Home'));
+const RegisterPage = lazy(() => import('../pages/Register'));
+const LoginPage = lazy(() => import('../pages/Login'));
+const TasksPage = lazy(() => import('../pages/Tasks'));
 
 export const App = () => {
   const dispatch = useDispatch();
-  const error = useSelector(selectError);
-  const isLoading = useSelector(selectIsLoading);
+  const { isRefreshing } = useAuth();
 
   useEffect(() => {
-    dispatch(fetchTasks());
+    dispatch(refreshUser());
   }, [dispatch]);
 
-  return (
-    <Layout>
-      <AppBar />
-      <TaskForm />
-      {isLoading && !error && <b>Request in progress...</b>}
-      <TaskList />
-    </Layout>
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Homepage />} />
+        <Route path="/register" element={<RegisterPage />}></Route>
+        <Route path="/login" element={<LoginPage />}></Route>
+        <Route path="/tasks" element={<TasksPage />}></Route>
+      </Route>
+    </Routes>
   );
 };

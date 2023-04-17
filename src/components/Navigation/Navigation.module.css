@@ -1,0 +1,35 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: #2a363b;
+  padding: 25px;
+  background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.link:before {
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.link:hover {
+  background-position: 0;
+}
+
+.link:hover::before {
+  width: 100%;
+}
+
+.link.active {
+  color: #54b3d6;
+}
